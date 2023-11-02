@@ -79,7 +79,6 @@ const products = [
 
          function filtered()
          {
-
                const SelectCategory = categorySelect.value;
                let filteredProducts = products;
 
@@ -102,9 +101,10 @@ const products = [
 
             productCard.innerHTML = `
             <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-title card-center"> Product item name : </div>
             <div class="card-header">${product.name}</div>
             <div class="card-body text-primary">
-            <h5 class="card-title">${product.category}</h5>
+            <h5 class="card-title">Category : ${product.category}</h5>
             </div> 
             </div>        
             `;
@@ -118,6 +118,8 @@ const products = [
 
          console.log(filtered);
          console.log(updateProductcard);
+         console.log(product.name);
+
 
 </script>
 

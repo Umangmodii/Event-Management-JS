@@ -33,39 +33,57 @@
 </div>
        </form>
 
-    <!-- Javascript Code -->
-<!-- 
-//Create a basic web application that checks if an entered employee name exists in a list of predefined employee names. 
-It provides feedback to the user about whether the employee exists or not.
-
-const employees = ["Alice", "Bob", "Charlie", "David", "Eve"]; -->
-
 <script>
 
       const employees = ["Umang", "Tanish", "Vanish", "Tejsav", "Rahil"]; 
 
-      function  funEmp()
+      function funEmp()
       {
 
       const getEmployeeName = document.getElementById("EmployeeeName").value;
+      const loweremp = employees.map(employee => employee.toLowerCase());
       const getResult = document.getElementById("result");
 
-                 if(employees.includes(getEmployeeName))
+//       var lower = getResult.textContent.toLowerCase();
+//       var upper = getResult.textContent.toUpperCase()
+
+       const lower = getEmployeeName.toLowerCase();
+
+                 if(loweremp.includes(lower))
                  {
                       getResult.textContent = `${getEmployeeName} exists in the list of employees.`;
+                    
                  }
 
                  else
                  {
                       getResult.textContent = `${getEmployeeName} does not exist in the list of employees.`;
+                    //   console.log(getResult.toLowerCase);
+              //       document.getElementById("result").textContent =  `${getEmployeeName} does not exists in the list of employees.`;
                  }
+              //    if(employees.toLowerCase)
+              //    {
+              //           console.log("Please Enter the Small Characters.");
+              //           return 1;
+              //    }
 
-      }
+              //    else
+              //   {
+              //          return 0;
+              //   }
 
-      console.log(funEmp);
+              //   if(employees.toUpperCase)
+              //   {
+              //          console.log("Please Enter the Capital Characters.");
+              //          return 1;
+              //   }
 
-    
+              //   else
+              //   {
+              //           return 0;
+              //   } 
 
+  }
 
 </script>
 
