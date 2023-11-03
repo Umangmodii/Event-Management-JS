@@ -65,11 +65,11 @@
 <script>
 
 const products = [
-            { name: "Laptop", category: "electronics" },
+            { name: "Laptop", category: "electronics", img: "https://e7.pngegg.com/pngimages/697/440/png-clipart-home-appliance-consumer-electronics-lg-electronics-laptop-laptop-kitchen-electronics.png"},
             { name: "T-Shirt", category: "clothing" },
             { name: "Smartphone", category: "electronics" },
             { name: "Sofa", category: "home" },
-            { name: "Dress", category: "clothing" },
+            { name: "Dress", category: "clothing", img: "https://i.etsystatic.com/36064523/r/il/f2900e/4222637655/il_570xN.4222637655_l2fm.jpg" },
         ];
 
          const getcategorySelect = document.getElementById("categorySelect");
@@ -84,7 +84,8 @@ const products = [
 
               if(SelectCategory !== "all")
               {
-                      filteredProducts = products.filter(products => products.category === SelectCategory);
+                      filteredProducts = products.filter(products =>
+                       products.category === SelectCategory);
               }    
               
               updateProductcard(filteredProducts);
@@ -101,7 +102,8 @@ const products = [
 
             productCard.innerHTML = `
             <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card-title card-center"> Product item name : </div>
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://e7.pngegg.com/pngimages/697/440/png-clipart-home-appliance-consumer-electronics-lg-electronics-laptop-laptop-kitchen-electronics.png" alt="Card image cap">
             <div class="card-header">${product.name}</div>
             <div class="card-body text-primary">
             <h5 class="card-title">Category : ${product.category}</h5>
